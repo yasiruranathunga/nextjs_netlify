@@ -1,3 +1,5 @@
+//After running next build, Next.js will produce an out folder which contains the HTML/CSS/JS assets for your application.
+
 /**
  * @type {import('next').NextConfig}
  */
