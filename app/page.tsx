@@ -1,11 +1,6 @@
-"use client";
-import { useState } from 'react';
+"use client"; // For client-side rendering
 
-export const getStaticProps = () => {
-  return {
-    props: {}, // No data needed, static page
-  };
-};
+import { useState } from 'react';
 
 const ContactForm: React.FC = () => {
   const [formState, setFormState] = useState({
@@ -26,7 +21,7 @@ const ContactForm: React.FC = () => {
       data-netlify="true"
       onSubmit={(e) => {
         e.preventDefault();
-        // Add form submission logic here (e.g., fetch, axios, etc.)
+        // Add form submission logic here
       }}
       style={{
         display: 'flex',
