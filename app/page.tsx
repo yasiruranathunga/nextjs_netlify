@@ -5,25 +5,47 @@ export default function Home() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
 
-  <form name="contact" method="POST" data-netlify="true">
+      <form 
+  name="contact" 
+  method="POST" 
+  data-netlify="true" 
+  style={{ display: 'flex', flexDirection: 'column', gap: '10px', maxWidth: '400px', margin: 'auto' }}
+>
   <input type="hidden" name="form-name" value="contact" />
-  <p>
-    <label>Your Name: <input type="text" name="name" /></label>
+  <p style={{ margin: '0' }}>
+    <label style={{ display: 'flex', flexDirection: 'column' }}>
+      Your Name: 
+      <input type="text" name="name" style={{ padding: '8px', marginTop: '5px' }} />
+    </label>
   </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" /></label>
+  <p style={{ margin: '0' }}>
+    <label style={{ display: 'flex', flexDirection: 'column' }}>
+      Your Email: 
+      <input type="email" name="email" style={{ padding: '8px', marginTop: '5px' }} />
+    </label>
   </p>
-  <p>
-    <label>Your Role: <select name="role[]" multiple>
-      <option value="leader">Leader</option>
-      <option value="follower">Follower</option>
-    </select></label>
+  <p style={{ margin: '0' }}>
+    <label style={{ display: 'flex', flexDirection: 'column' }}>
+      Your Role: 
+      <select name="role[]" multiple style={{ padding: '8px', marginTop: '5px' }}>
+        <option value="leader">Leader</option>
+        <option value="follower">Follower</option>
+      </select>
+    </label>
   </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
+  <p style={{ margin: '0' }}>
+    <label style={{ display: 'flex', flexDirection: 'column' }}>
+      Message: 
+      <textarea name="message" style={{ padding: '8px', marginTop: '5px' }}></textarea>
+    </label>
   </p>
-  <p>
-    <button type="submit">Send</button>
+  <p style={{ margin: '0' }}>
+    <button 
+      type="submit" 
+      style={{ padding: '10px 15px', backgroundColor: '#0070f3', color: '#ffffff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
+    >
+      Send
+    </button>
   </p>
 </form>
 
