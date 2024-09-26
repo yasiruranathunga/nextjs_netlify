@@ -1,39 +1,20 @@
-// app/page.tsx
-import React from 'react';
-
-const ContactForm = () => {
-  return (
-    <form
-      name="contact"
-      method="POST"
-      data-netlify="true" // Enables Netlify's form handling
-      action="/success" // Redirect URL after submission
-    >
-      <input type="hidden" name="form-name" value="contact" />
-      <label>
-        Name:
-        <input type="text" name="name" required />
-      </label>
-      <label>
-        Email:
-        <input type="email" name="email" required />
-      </label>
-      <label>
-        Message:
-        <textarea name="message" required></textarea>
-      </label>
-      <button type="submit">Submit</button>
-    </form>
-  );
-};
-
-const HomePage = () => {
-  return (
-    <div>
-      <h1>Contact Us</h1>
-      <ContactForm />
-    </div>
-  );
-};
-
-export default HomePage;
+<form name="contact" method="POST" netlify>
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
