@@ -1,9 +1,0 @@
-[build]
-  command = "npm run build --force"
-  publish = ".next"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-  [plugins.inputs]
-  # Additional plugin inputs can go here, if needed
