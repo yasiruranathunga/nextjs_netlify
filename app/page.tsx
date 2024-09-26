@@ -1,6 +1,12 @@
 "use client";
 import { useState } from 'react';
 
+export const getStaticProps = () => {
+  return {
+    props: {}, // No data needed, static page
+  };
+};
+
 const ContactForm: React.FC = () => {
   const [formState, setFormState] = useState({
     name: '',
@@ -35,7 +41,7 @@ const ContactForm: React.FC = () => {
       }}
     >
       <input type="hidden" name="form-name" value="contact" />
-      
+
       <label style={{ marginBottom: '10px', fontWeight: '500' }}>
         Name:
         <input
