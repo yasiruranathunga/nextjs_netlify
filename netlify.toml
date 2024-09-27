@@ -1,9 +1,9 @@
 [build]
-  command = "npm run build"
-  publish = "out" # Adjust if your output directory is different
+  command = "npm run build" # Command to build your Next.js application
+  publish = "out"           # The directory where the output will be published (check your build output location)
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
+  package = "@netlify/plugin-nextjs" # Plugin for Next.js
 
 [[redirects]]
   from = "/_next/*"
