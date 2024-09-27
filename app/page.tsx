@@ -208,7 +208,6 @@ const Home = async () => {
         {entry && (
           <div>
             {entry.fields.name && <h1>{entry.fields.name}</h1>}
-            {entry.fields.description && <p>{entry.fields.description}</p>}
             {entry.fields.image?.fields && (
               <div>
                 <Image 
@@ -218,9 +217,7 @@ const Home = async () => {
                   height={500} // Set desired height
                   quality={60} // Optional: set quality if needed
                 />
-                <p>Content ID: {entry.fields.contentId}</p>
-                <p>Email: {entry.fields.email}</p>
-                <p>Publication Date: {entry.fields.publicationDate}</p>
+            
               </div>
             )}
           </div>
