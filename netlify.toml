@@ -1,3 +1,9 @@
 [build]
 command = "npm run build"
 publish = ".next"
+
+[[redirects]]
+  from = "/images/*"
+  to = "https://main--dapper-kitten-a56b6a.netlify.app/"
+  status = 200
+  force = true

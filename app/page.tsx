@@ -109,13 +109,14 @@ const Home = async () => {
             {entry.fields.email && <h1>{entry.fields.email}</h1>}
             {entry.fields.image?.fields && (
               <div>
-                <Image 
-                  src={entry.fields.image.fields.webImageUrl || ''} // Fallback to empty string if undefined
-                  alt={entry.fields.image.fields.altText || ''} // Fallback to empty string if undefined
-                  width={500} // Set desired width
-                  height={500} // Set desired height
-                  quality={60} // Optional: set quality if needed
-                />
+                <Image
+  src={`${process.env.NEXT_PUBLIC_NETLIFY_URL}/images/${encodeURIComponent(entry.fields.image.fields.webImageUrl || '')}?w=500&h=500&q=60&fit=cover`}
+  alt={entry.fields.image.fields.altText || ''}
+  width={500}
+  height={500}
+  quality={60}
+/>
+
               </div>
             )}
           </div>
