@@ -46,7 +46,7 @@ const Home = async () => {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        
+
         {/* Netlify Form */}
         <form
           name="contact"
@@ -91,12 +91,12 @@ const Home = async () => {
           </p>
           <p style={{ margin: '0' }}>
             <center>
-            <button
-              type="submit"
-              style={{ padding: '10px 15px', backgroundColor: '#0070f3', color: '#ffffff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
-            >
-              Send
-            </button>
+              <button
+                type="submit"
+                style={{ padding: '10px 15px', backgroundColor: '#0070f3', color: '#ffffff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
+              >
+                Send
+              </button>
             </center>
           </p>
         </form>
@@ -109,8 +109,8 @@ const Home = async () => {
             {entry.fields.email && <h1>{entry.fields.email}</h1>}
             {entry.fields.image?.fields && (
               <div>
-                <Image 
-                  src={entry.fields.image.fields.webImageUrl || ''} // Fallback to empty string if undefined
+                <Image
+                  src={entry.fields.image.fields.webImageUrl + '?format=webp' || ''} // Fallback to empty string if undefined
                   alt={entry.fields.image.fields.altText || ''} // Fallback to empty string if undefined
                   width={500} // Set desired width
                   height={500} // Set desired height
