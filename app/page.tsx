@@ -119,10 +119,9 @@ const client = contentful.createClient({
 interface ContentfulEntry {
   fields: {
     name?: string; // Made optional
-    description?: string;
     email?: string; // Made optional
     contentId?: string; // Made optional
-    publicationDate?: string; // Made optional
+  
     image?: {
       fields: {
         altText?: string; // Made optional
