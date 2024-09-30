@@ -104,6 +104,7 @@ const Home = async () => {
         {entry && (
           <div>
             {entry.fields.name && <h1>{entry.fields.name}</h1>}
+            {entry.fields.email && <h1>{entry.fields.email}</h1>}
             {entry.fields.image?.fields && (
               <div>
                 <Image 
