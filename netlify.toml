@@ -1,16 +1,3 @@
 [build]
-  command = "npm run build" # Command to build your Next.js application
-  publish = "out"           # The directory where the output will be published (check your build output location)
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs" # Plugin for Next.js
-
-[[redirects]]
-  from = "/_next/*"
-  to = "/_next/:splat"
-  status = 200
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Type = "text/html; charset=UTF-8"
+command = "npm run build"
+publish = ".next"
