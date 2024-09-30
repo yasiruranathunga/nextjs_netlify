@@ -90,12 +90,14 @@ const Home = async () => {
             </label>
           </p>
           <p style={{ margin: '0' }}>
+            <center>
             <button
               type="submit"
               style={{ padding: '10px 15px', backgroundColor: '#0070f3', color: '#ffffff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
             >
               Send
             </button>
+            </center>
           </p>
         </form>
 
